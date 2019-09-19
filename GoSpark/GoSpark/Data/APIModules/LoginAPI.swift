@@ -33,7 +33,7 @@ class LoginAPI: LoginDataSource {
                 case.success(let value):
                     
                     let responseDictionary = value as! [String : Any]
-                    let status = responseDictionary["status"] as! String
+                    let status = responseDictionary["status"] as? String
                     guard status == "true" else {
                         
                         observer.onError(NSError(domain: "Invalid Credentials", code: 400, userInfo: nil))
@@ -71,14 +71,14 @@ class LoginAPI: LoginDataSource {
                 switch(response.result) {
                 case.success(let value):
                     
-                    let resultDictionary = value as! [String : Any]
-                    let errors = resultDictionary["errors"]
+                    let resultDictionary = value as? [String : Any]
+                    let errors = resultDictionary?["errors"]
                     guard errors == nil else {
                         
                         observer.onNext("Email already exist")
                         return
                     }
-                    let message = resultDictionary["message"]
+                    let message = resultDictionary?["message"]
                     observer.onNext(message)
                     
                 case .failure(_):
