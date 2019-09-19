@@ -1,0 +1,1006 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32823851179492747336BCC5 /* Pods_GoSpark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC6EDDCA6701ACF72CBD3E /* Pods_GoSpark.framework */; };
+		5AD165ABB16A8E6E5A9083FC /* Pods_GoSparkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6083CE5E5D57CF9076F54F /* Pods_GoSparkTests.framework */; };
+		CDA3B54C5A5B322B11D014BB /* Pods_GoSparkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78978AC381DFA200819973A2 /* Pods_GoSparkUITests.framework */; };
+		F25F47C42331FF9000AE9FFD /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47C32331FF9000AE9FFD /* LoginRepository.swift */; };
+		F25F47C62331FFA000AE9FFD /* LoginDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47C52331FFA000AE9FFD /* LoginDataSource.swift */; };
+		F25F47C82331FFAF00AE9FFD /* NewsFeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47C72331FFAF00AE9FFD /* NewsFeedRepository.swift */; };
+		F25F47CA2331FFBC00AE9FFD /* NewsFeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47C92331FFBC00AE9FFD /* NewsFeedDataSource.swift */; };
+		F25F47CC2331FFE000AE9FFD /* LoginRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47CB2331FFE000AE9FFD /* LoginRemoteDataSource.swift */; };
+		F25F47CE2332002500AE9FFD /* NewsFeedRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47CD2332002500AE9FFD /* NewsFeedRemoteDataSource.swift */; };
+		F25F47D12332010400AE9FFD /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47D02332010400AE9FFD /* BaseAPI.swift */; };
+		F25F47D32332033400AE9FFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47D22332033400AE9FFD /* User.swift */; };
+		F25F47D52332059C00AE9FFD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47D42332059C00AE9FFD /* LoginViewModel.swift */; };
+		F25F47DA2332827200AE9FFD /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47D92332827200AE9FFD /* AppConstants.swift */; };
+		F25F47DC233282EA00AE9FFD /* TagConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47DB233282EA00AE9FFD /* TagConstants.swift */; };
+		F25F47DE2333316500AE9FFD /* NewsFeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47DD2333316500AE9FFD /* NewsFeedAPI.swift */; };
+		F25F47E02333320100AE9FFD /* NewsFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47DF2333320100AE9FFD /* NewsFeedViewModel.swift */; };
+		F25F47E2233337B500AE9FFD /* KSteam.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47E1233337B500AE9FFD /* KSteam.swift */; };
+		F25F47E4233337DE00AE9FFD /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47E3233337DE00AE9FFD /* NewsFeed.swift */; };
+		F25F47E8233339F300AE9FFD /* NewsFeedsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47E6233339F300AE9FFD /* NewsFeedsTableViewCell.swift */; };
+		F25F47E9233339F300AE9FFD /* NewsFeedsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25F47E7233339F300AE9FFD /* NewsFeedsTableViewCell.xib */; };
+		F25F47EC23333D6E00AE9FFD /* CellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47EB23333D6E00AE9FFD /* CellDataSource.swift */; };
+		F25F47EE23333DD400AE9FFD /* NewsFeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47ED23333DD400AE9FFD /* NewsFeedCellViewModel.swift */; };
+		F25F47F22333520300AE9FFD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47F12333520300AE9FFD /* WebViewController.swift */; };
+		F25F47F4233353A700AE9FFD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25F47F3233353A700AE9FFD /* WebKit.framework */; };
+		F25F47F723335CC700AE9FFD /* CGSize+Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47F623335CC700AE9FFD /* CGSize+Calculate.swift */; };
+		F25F47F9233382F100AE9FFD /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F47F8233382F100AE9FFD /* String+Validation.swift */; };
+		F283280A2331E9150008DA24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28328092331E9150008DA24 /* AppDelegate.swift */; };
+		F283280F2331E9150008DA24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F283280D2331E9150008DA24 /* Main.storyboard */; };
+		F28328112331E9170008DA24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28328102331E9170008DA24 /* Assets.xcassets */; };
+		F28328142331E9170008DA24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28328122331E9170008DA24 /* LaunchScreen.storyboard */; };
+		F283281F2331E9170008DA24 /* GoSparkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283281E2331E9170008DA24 /* GoSparkTests.swift */; };
+		F283282A2331E9170008DA24 /* GoSparkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28328292331E9170008DA24 /* GoSparkUITests.swift */; };
+		F283283D2331E9E50008DA24 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283283C2331E9E50008DA24 /* BaseViewController.swift */; };
+		F283283F2331E9FA0008DA24 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F283283E2331E9FA0008DA24 /* LoginViewController.swift */; };
+		F28328412331EA0A0008DA24 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28328402331EA0A0008DA24 /* RegisterViewController.swift */; };
+		F28328432331EA870008DA24 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28328422331EA870008DA24 /* NewsFeedViewController.swift */; };
+		F28328452331EB6E0008DA24 /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28328442331EB6E0008DA24 /* NewsFeed.storyboard */; };
+		F28328522331ECF50008DA24 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28328512331ECF50008DA24 /* LoginAPI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F283281B2331E9170008DA24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F28327FE2331E9150008DA24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F28328052331E9150008DA24;
+			remoteInfo = GoSpark;
+		};
+		F28328262331E9170008DA24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F28327FE2331E9150008DA24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F28328052331E9150008DA24;
+			remoteInfo = GoSpark;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E41F07F1265E3C6B5686129 /* Pods-GoSparkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoSparkTests.debug.xcconfig"; path = "Target Support Files/Pods-GoSparkTests/Pods-GoSparkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		21643E47A58FB8182E72851C /* Pods-GoSpark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoSpark.release.xcconfig"; path = "Target Support Files/Pods-GoSpark/Pods-GoSpark.release.xcconfig"; sourceTree = "<group>"; };
+		21DA0F7FDBDF92DFFB98BBC9 /* Pods-GoSpark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoSpark.debug.xcconfig"; path = "Target Support Files/Pods-GoSpark/Pods-GoSpark.debug.xcconfig"; sourceTree = "<group>"; };
+		5A30D0E74326E3AF2EB58449 /* Pods-GoSparkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoSparkUITests.release.xcconfig"; path = "Target Support Files/Pods-GoSparkUITests/Pods-GoSparkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		670908F6AFB11F9395438B7F /* Pods-GoSparkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoSparkUITests.debug.xcconfig"; path = "Target Support Files/Pods-GoSparkUITests/Pods-GoSparkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		78978AC381DFA200819973A2 /* Pods_GoSparkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoSparkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7925347AF811D5C97B5F468B /* Pods-GoSparkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoSparkTests.release.xcconfig"; path = "Target Support Files/Pods-GoSparkTests/Pods-GoSparkTests.release.xcconfig"; sourceTree = "<group>"; };
+		86AC6EDDCA6701ACF72CBD3E /* Pods_GoSpark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoSpark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F6083CE5E5D57CF9076F54F /* Pods_GoSparkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoSparkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25F47C32331FF9000AE9FFD /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		F25F47C52331FFA000AE9FFD /* LoginDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataSource.swift; sourceTree = "<group>"; };
+		F25F47C72331FFAF00AE9FFD /* NewsFeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedRepository.swift; sourceTree = "<group>"; };
+		F25F47C92331FFBC00AE9FFD /* NewsFeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedDataSource.swift; sourceTree = "<group>"; };
+		F25F47CB2331FFE000AE9FFD /* LoginRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRemoteDataSource.swift; sourceTree = "<group>"; };
+		F25F47CD2332002500AE9FFD /* NewsFeedRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedRemoteDataSource.swift; sourceTree = "<group>"; };
+		F25F47D02332010400AE9FFD /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		F25F47D22332033400AE9FFD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F25F47D42332059C00AE9FFD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F25F47D92332827200AE9FFD /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F25F47DB233282EA00AE9FFD /* TagConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagConstants.swift; sourceTree = "<group>"; };
+		F25F47DD2333316500AE9FFD /* NewsFeedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedAPI.swift; sourceTree = "<group>"; };
+		F25F47DF2333320100AE9FFD /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
+		F25F47E1233337B500AE9FFD /* KSteam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSteam.swift; sourceTree = "<group>"; };
+		F25F47E3233337DE00AE9FFD /* NewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
+		F25F47E6233339F300AE9FFD /* NewsFeedsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedsTableViewCell.swift; sourceTree = "<group>"; };
+		F25F47E7233339F300AE9FFD /* NewsFeedsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedsTableViewCell.xib; sourceTree = "<group>"; };
+		F25F47EB23333D6E00AE9FFD /* CellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataSource.swift; sourceTree = "<group>"; };
+		F25F47ED23333DD400AE9FFD /* NewsFeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCellViewModel.swift; sourceTree = "<group>"; };
+		F25F47F12333520300AE9FFD /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F25F47F3233353A700AE9FFD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F25F47F623335CC700AE9FFD /* CGSize+Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Calculate.swift"; sourceTree = "<group>"; };
+		F25F47F8233382F100AE9FFD /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		F28328062331E9150008DA24 /* GoSpark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoSpark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F28328092331E9150008DA24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F283280E2331E9150008DA24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F28328102331E9170008DA24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F28328132331E9170008DA24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F28328152331E9170008DA24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F283281A2331E9170008DA24 /* GoSparkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoSparkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F283281E2331E9170008DA24 /* GoSparkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoSparkTests.swift; sourceTree = "<group>"; };
+		F28328202331E9170008DA24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F28328252331E9170008DA24 /* GoSparkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoSparkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F28328292331E9170008DA24 /* GoSparkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoSparkUITests.swift; sourceTree = "<group>"; };
+		F283282B2331E9170008DA24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F283283C2331E9E50008DA24 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F283283E2331E9FA0008DA24 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F28328402331EA0A0008DA24 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F28328422331EA870008DA24 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		F28328442331EB6E0008DA24 /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
+		F28328512331ECF50008DA24 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F28328032331E9150008DA24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F25F47F4233353A700AE9FFD /* WebKit.framework in Frameworks */,
+				32823851179492747336BCC5 /* Pods_GoSpark.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F28328172331E9170008DA24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD165ABB16A8E6E5A9083FC /* Pods_GoSparkTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F28328222331E9170008DA24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA3B54C5A5B322B11D014BB /* Pods_GoSparkUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4294CC74C90F53B1856324B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47F3233353A700AE9FFD /* WebKit.framework */,
+				86AC6EDDCA6701ACF72CBD3E /* Pods_GoSpark.framework */,
+				9F6083CE5E5D57CF9076F54F /* Pods_GoSparkTests.framework */,
+				78978AC381DFA200819973A2 /* Pods_GoSparkUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		944D13C845A4FB9D08D1C9E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21DA0F7FDBDF92DFFB98BBC9 /* Pods-GoSpark.debug.xcconfig */,
+				21643E47A58FB8182E72851C /* Pods-GoSpark.release.xcconfig */,
+				0E41F07F1265E3C6B5686129 /* Pods-GoSparkTests.debug.xcconfig */,
+				7925347AF811D5C97B5F468B /* Pods-GoSparkTests.release.xcconfig */,
+				670908F6AFB11F9395438B7F /* Pods-GoSparkUITests.debug.xcconfig */,
+				5A30D0E74326E3AF2EB58449 /* Pods-GoSparkUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F25F47CF233200F100AE9FFD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47D02332010400AE9FFD /* BaseAPI.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F25F47D623320EDC00AE9FFD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47F523335CBB00AE9FFD /* Extensions */,
+				F25F47EA23333D5D00AE9FFD /* CellConfig */,
+				F25F47D82332826600AE9FFD /* AppConfig */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F25F47D82332826600AE9FFD /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47D92332827200AE9FFD /* AppConstants.swift */,
+				F25F47DB233282EA00AE9FFD /* TagConstants.swift */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		F25F47E5233339D500AE9FFD /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47E6233339F300AE9FFD /* NewsFeedsTableViewCell.swift */,
+				F25F47E7233339F300AE9FFD /* NewsFeedsTableViewCell.xib */,
+				F25F47ED23333DD400AE9FFD /* NewsFeedCellViewModel.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		F25F47EA23333D5D00AE9FFD /* CellConfig */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47EB23333D6E00AE9FFD /* CellDataSource.swift */,
+			);
+			path = CellConfig;
+			sourceTree = "<group>";
+		};
+		F25F47F523335CBB00AE9FFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47F623335CC700AE9FFD /* CGSize+Calculate.swift */,
+				F25F47F8233382F100AE9FFD /* String+Validation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F28327FD2331E9150008DA24 = {
+			isa = PBXGroup;
+			children = (
+				F28328082331E9150008DA24 /* GoSpark */,
+				F283281D2331E9170008DA24 /* GoSparkTests */,
+				F28328282331E9170008DA24 /* GoSparkUITests */,
+				F28328072331E9150008DA24 /* Products */,
+				944D13C845A4FB9D08D1C9E7 /* Pods */,
+				4294CC74C90F53B1856324B5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F28328072331E9150008DA24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F28328062331E9150008DA24 /* GoSpark.app */,
+				F283281A2331E9170008DA24 /* GoSparkTests.xctest */,
+				F28328252331E9170008DA24 /* GoSparkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F28328082331E9150008DA24 /* GoSpark */ = {
+			isa = PBXGroup;
+			children = (
+				F28328372331E95E0008DA24 /* UI */,
+				F25F47D623320EDC00AE9FFD /* Utilities */,
+				F28328462331EBCB0008DA24 /* Data */,
+				F28328092331E9150008DA24 /* AppDelegate.swift */,
+				F283280D2331E9150008DA24 /* Main.storyboard */,
+				F28328102331E9170008DA24 /* Assets.xcassets */,
+				F28328122331E9170008DA24 /* LaunchScreen.storyboard */,
+				F28328152331E9170008DA24 /* Info.plist */,
+			);
+			path = GoSpark;
+			sourceTree = "<group>";
+		};
+		F283281D2331E9170008DA24 /* GoSparkTests */ = {
+			isa = PBXGroup;
+			children = (
+				F283281E2331E9170008DA24 /* GoSparkTests.swift */,
+				F28328202331E9170008DA24 /* Info.plist */,
+			);
+			path = GoSparkTests;
+			sourceTree = "<group>";
+		};
+		F28328282331E9170008DA24 /* GoSparkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F28328292331E9170008DA24 /* GoSparkUITests.swift */,
+				F283282B2331E9170008DA24 /* Info.plist */,
+			);
+			path = GoSparkUITests;
+			sourceTree = "<group>";
+		};
+		F28328372331E95E0008DA24 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F28328382331E96C0008DA24 /* Base */,
+				F28328392331E97E0008DA24 /* Register */,
+				F283283A2331E9890008DA24 /* Login */,
+				F283283B2331E9970008DA24 /* NewsFeeds */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F28328382331E96C0008DA24 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F283283C2331E9E50008DA24 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F28328392331E97E0008DA24 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				F28328402331EA0A0008DA24 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		F283283A2331E9890008DA24 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F283283E2331E9FA0008DA24 /* LoginViewController.swift */,
+				F25F47D42332059C00AE9FFD /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F283283B2331E9970008DA24 /* NewsFeeds */ = {
+			isa = PBXGroup;
+			children = (
+				F28328422331EA870008DA24 /* NewsFeedViewController.swift */,
+				F25F47DF2333320100AE9FFD /* NewsFeedViewModel.swift */,
+				F25F47F12333520300AE9FFD /* WebViewController.swift */,
+				F28328442331EB6E0008DA24 /* NewsFeed.storyboard */,
+				F25F47E5233339D500AE9FFD /* CustomCells */,
+			);
+			path = NewsFeeds;
+			sourceTree = "<group>";
+		};
+		F28328462331EBCB0008DA24 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47CF233200F100AE9FFD /* Config */,
+				F28328482331EC180008DA24 /* APIModules */,
+				F28328472331EC020008DA24 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F28328472331EC020008DA24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F283284B2331EC400008DA24 /* Login */,
+				F283284E2331ECA70008DA24 /* NewsFeed */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F28328482331EC180008DA24 /* APIModules */ = {
+			isa = PBXGroup;
+			children = (
+				F28328512331ECF50008DA24 /* LoginAPI.swift */,
+				F25F47DD2333316500AE9FFD /* NewsFeedAPI.swift */,
+			);
+			path = APIModules;
+			sourceTree = "<group>";
+		};
+		F283284B2331EC400008DA24 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47D22332033400AE9FFD /* User.swift */,
+				F283284C2331EC5B0008DA24 /* Repository */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F283284C2331EC5B0008DA24 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47C32331FF9000AE9FFD /* LoginRepository.swift */,
+				F25F47C52331FFA000AE9FFD /* LoginDataSource.swift */,
+				F283284D2331EC6E0008DA24 /* Remote */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F283284D2331EC6E0008DA24 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47CB2331FFE000AE9FFD /* LoginRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		F283284E2331ECA70008DA24 /* NewsFeed */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47E1233337B500AE9FFD /* KSteam.swift */,
+				F25F47E3233337DE00AE9FFD /* NewsFeed.swift */,
+				F283284F2331ECA70008DA24 /* Repository */,
+			);
+			path = NewsFeed;
+			sourceTree = "<group>";
+		};
+		F283284F2331ECA70008DA24 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47C92331FFBC00AE9FFD /* NewsFeedDataSource.swift */,
+				F25F47C72331FFAF00AE9FFD /* NewsFeedRepository.swift */,
+				F28328502331ECA70008DA24 /* Remote */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F28328502331ECA70008DA24 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				F25F47CD2332002500AE9FFD /* NewsFeedRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F28328052331E9150008DA24 /* GoSpark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F283282E2331E9170008DA24 /* Build configuration list for PBXNativeTarget "GoSpark" */;
+			buildPhases = (
+				0FD19E6EFF0DB3AAC86FBE54 /* [CP] Check Pods Manifest.lock */,
+				F28328022331E9150008DA24 /* Sources */,
+				F28328032331E9150008DA24 /* Frameworks */,
+				F28328042331E9150008DA24 /* Resources */,
+				9E6D6E5DD4993A75D2DD6378 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoSpark;
+			productName = GoSpark;
+			productReference = F28328062331E9150008DA24 /* GoSpark.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F28328192331E9170008DA24 /* GoSparkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F28328312331E9170008DA24 /* Build configuration list for PBXNativeTarget "GoSparkTests" */;
+			buildPhases = (
+				43347EC8B5905FE70D57FDEE /* [CP] Check Pods Manifest.lock */,
+				F28328162331E9170008DA24 /* Sources */,
+				F28328172331E9170008DA24 /* Frameworks */,
+				F28328182331E9170008DA24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F283281C2331E9170008DA24 /* PBXTargetDependency */,
+			);
+			name = GoSparkTests;
+			productName = GoSparkTests;
+			productReference = F283281A2331E9170008DA24 /* GoSparkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F28328242331E9170008DA24 /* GoSparkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F28328342331E9170008DA24 /* Build configuration list for PBXNativeTarget "GoSparkUITests" */;
+			buildPhases = (
+				08375E3DC533AD9D70FB92F4 /* [CP] Check Pods Manifest.lock */,
+				F28328212331E9170008DA24 /* Sources */,
+				F28328222331E9170008DA24 /* Frameworks */,
+				F28328232331E9170008DA24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F28328272331E9170008DA24 /* PBXTargetDependency */,
+			);
+			name = GoSparkUITests;
+			productName = GoSparkUITests;
+			productReference = F28328252331E9170008DA24 /* GoSparkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F28327FE2331E9150008DA24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Test;
+				TargetAttributes = {
+					F28328052331E9150008DA24 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					F28328192331E9170008DA24 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = F28328052331E9150008DA24;
+					};
+					F28328242331E9170008DA24 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = F28328052331E9150008DA24;
+					};
+				};
+			};
+			buildConfigurationList = F28328012331E9150008DA24 /* Build configuration list for PBXProject "GoSpark" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F28327FD2331E9150008DA24;
+			productRefGroup = F28328072331E9150008DA24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F28328052331E9150008DA24 /* GoSpark */,
+				F28328192331E9170008DA24 /* GoSparkTests */,
+				F28328242331E9170008DA24 /* GoSparkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F28328042331E9150008DA24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F28328142331E9170008DA24 /* LaunchScreen.storyboard in Resources */,
+				F25F47E9233339F300AE9FFD /* NewsFeedsTableViewCell.xib in Resources */,
+				F28328112331E9170008DA24 /* Assets.xcassets in Resources */,
+				F283280F2331E9150008DA24 /* Main.storyboard in Resources */,
+				F28328452331EB6E0008DA24 /* NewsFeed.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F28328182331E9170008DA24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F28328232331E9170008DA24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08375E3DC533AD9D70FB92F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoSparkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0FD19E6EFF0DB3AAC86FBE54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoSpark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43347EC8B5905FE70D57FDEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoSparkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E6D6E5DD4993A75D2DD6378 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoSpark/Pods-GoSpark-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoSpark/Pods-GoSpark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F28328022331E9150008DA24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F25F47E2233337B500AE9FFD /* KSteam.swift in Sources */,
+				F25F47EC23333D6E00AE9FFD /* CellDataSource.swift in Sources */,
+				F283283F2331E9FA0008DA24 /* LoginViewController.swift in Sources */,
+				F283280A2331E9150008DA24 /* AppDelegate.swift in Sources */,
+				F283283D2331E9E50008DA24 /* BaseViewController.swift in Sources */,
+				F25F47C42331FF9000AE9FFD /* LoginRepository.swift in Sources */,
+				F25F47C82331FFAF00AE9FFD /* NewsFeedRepository.swift in Sources */,
+				F25F47E8233339F300AE9FFD /* NewsFeedsTableViewCell.swift in Sources */,
+				F25F47E4233337DE00AE9FFD /* NewsFeed.swift in Sources */,
+				F25F47F9233382F100AE9FFD /* String+Validation.swift in Sources */,
+				F25F47CA2331FFBC00AE9FFD /* NewsFeedDataSource.swift in Sources */,
+				F25F47D32332033400AE9FFD /* User.swift in Sources */,
+				F25F47DE2333316500AE9FFD /* NewsFeedAPI.swift in Sources */,
+				F25F47C62331FFA000AE9FFD /* LoginDataSource.swift in Sources */,
+				F25F47F22333520300AE9FFD /* WebViewController.swift in Sources */,
+				F25F47D52332059C00AE9FFD /* LoginViewModel.swift in Sources */,
+				F28328412331EA0A0008DA24 /* RegisterViewController.swift in Sources */,
+				F28328522331ECF50008DA24 /* LoginAPI.swift in Sources */,
+				F25F47DA2332827200AE9FFD /* AppConstants.swift in Sources */,
+				F25F47CE2332002500AE9FFD /* NewsFeedRemoteDataSource.swift in Sources */,
+				F25F47CC2331FFE000AE9FFD /* LoginRemoteDataSource.swift in Sources */,
+				F25F47EE23333DD400AE9FFD /* NewsFeedCellViewModel.swift in Sources */,
+				F28328432331EA870008DA24 /* NewsFeedViewController.swift in Sources */,
+				F25F47DC233282EA00AE9FFD /* TagConstants.swift in Sources */,
+				F25F47E02333320100AE9FFD /* NewsFeedViewModel.swift in Sources */,
+				F25F47D12332010400AE9FFD /* BaseAPI.swift in Sources */,
+				F25F47F723335CC700AE9FFD /* CGSize+Calculate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F28328162331E9170008DA24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F283281F2331E9170008DA24 /* GoSparkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F28328212331E9170008DA24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F283282A2331E9170008DA24 /* GoSparkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F283281C2331E9170008DA24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F28328052331E9150008DA24 /* GoSpark */;
+			targetProxy = F283281B2331E9170008DA24 /* PBXContainerItemProxy */;
+		};
+		F28328272331E9170008DA24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F28328052331E9150008DA24 /* GoSpark */;
+			targetProxy = F28328262331E9170008DA24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F283280D2331E9150008DA24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F283280E2331E9150008DA24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F28328122331E9170008DA24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F28328132331E9170008DA24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F283282C2331E9170008DA24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F283282D2331E9170008DA24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F283282F2331E9170008DA24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21DA0F7FDBDF92DFFB98BBC9 /* Pods-GoSpark.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoSpark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.GoSpark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F28328302331E9170008DA24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21643E47A58FB8182E72851C /* Pods-GoSpark.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoSpark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.GoSpark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F28328322331E9170008DA24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E41F07F1265E3C6B5686129 /* Pods-GoSparkTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoSparkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.GoSparkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoSpark.app/GoSpark";
+			};
+			name = Debug;
+		};
+		F28328332331E9170008DA24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7925347AF811D5C97B5F468B /* Pods-GoSparkTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoSparkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.GoSparkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoSpark.app/GoSpark";
+			};
+			name = Release;
+		};
+		F28328352331E9170008DA24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 670908F6AFB11F9395438B7F /* Pods-GoSparkUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoSparkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.GoSparkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoSpark;
+			};
+			name = Debug;
+		};
+		F28328362331E9170008DA24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A30D0E74326E3AF2EB58449 /* Pods-GoSparkUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoSparkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.GoSparkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoSpark;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F28328012331E9150008DA24 /* Build configuration list for PBXProject "GoSpark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F283282C2331E9170008DA24 /* Debug */,
+				F283282D2331E9170008DA24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F283282E2331E9170008DA24 /* Build configuration list for PBXNativeTarget "GoSpark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F283282F2331E9170008DA24 /* Debug */,
+				F28328302331E9170008DA24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F28328312331E9170008DA24 /* Build configuration list for PBXNativeTarget "GoSparkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F28328322331E9170008DA24 /* Debug */,
+				F28328332331E9170008DA24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F28328342331E9170008DA24 /* Build configuration list for PBXNativeTarget "GoSparkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F28328352331E9170008DA24 /* Debug */,
+				F28328362331E9170008DA24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F28327FE2331E9150008DA24 /* Project object */;
+}
