@@ -19,4 +19,10 @@ class AppConstants: NSObject {
         static let newsFeeds = "NewsFeed"
     }
     
+    // MARK: NewsFeed
+    struct NewsFeed {
+        
+        static let pageCount = 10
+    }
+    
 }

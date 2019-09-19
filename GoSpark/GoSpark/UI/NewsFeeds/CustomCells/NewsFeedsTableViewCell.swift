@@ -27,7 +27,6 @@ class NewsFeedsTableViewCell: UITableViewCell, CellDataSource {
     @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -64,6 +63,8 @@ class NewsFeedsTableViewCell: UITableViewCell, CellDataSource {
                 guard image != nil else {return}
                 let size = image?.size ?? CGSize.zero
                 let height = size.aspectHeight(basedOnWidth: self?.frame.size.width ?? 0)
+                guard height != self?.imageViewHeightConstraint.constant else {return}
+
                 self?.imageViewHeightConstraint.constant = height
                 self?.loader?.stopAnimating()
                 

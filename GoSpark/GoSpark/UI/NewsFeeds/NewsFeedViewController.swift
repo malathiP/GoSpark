@@ -17,6 +17,7 @@ class NewsFeedViewController: BaseViewController {
     weak var newsFeedViewModel = NewsFeedViewModel.sharedInstance
     let disposeBag = DisposeBag()
 
+    // MARK: IBOutlets
     @IBOutlet weak var newsFeedTableView: UITableView!
     
     // MARK: ViewLife Cycle
@@ -36,6 +37,8 @@ class NewsFeedViewController: BaseViewController {
         self.showLoader()
         self.loadNewsFeeds()
     }
+    
+    // MARK: Get new feeds
     func loadNewsFeeds() {
         
         let count = self.newsFeedViewModel?.noOfNewsFeeds() ?? 0
@@ -43,7 +46,7 @@ class NewsFeedViewController: BaseViewController {
             
             return
         }
-        let pageIndex = count / 10
+        let pageIndex = count / AppConstants.NewsFeed.pageCount
         newsFeedViewModel?.getNewsFeeds(basedOnAccessToken: loginViewModel?.accessToken(), page: pageIndex + 1)
         self.addObserverToNewsFeed()
     }
@@ -65,7 +68,7 @@ class NewsFeedViewController: BaseViewController {
         subscribe?.disposed(by: self.disposeBag)
     }
     
-    // MARK: IsAllFeeds loaded
+    // MARK: LoadMore
     func isAllFeedsLoaded() -> Bool {
         
         let totalCount = self.newsFeedViewModel?.totalCount() ?? 0
@@ -90,6 +93,8 @@ class NewsFeedViewController: BaseViewController {
         return currentIndex == loadedProducts
         
     }
+    
+    // MARK: Show Webpage
     func showWebPage(withUrl url : String?) {
         
         let storyBoardName = AppConstants.storyBoard.newsFeeds
