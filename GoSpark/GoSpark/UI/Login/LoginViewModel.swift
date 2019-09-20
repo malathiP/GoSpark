@@ -13,9 +13,6 @@ class LoginViewModel: NSObject {
 
     // MARK: - Variables
     var loginRepository: LoginRepository?
-    var disposeBag : DisposeBag? = DisposeBag()
-    var user = PublishSubject<User>()
-    var status = PublishSubject<String>()
 
     // MARK: Private variables
     private var userModel : User?
@@ -31,43 +28,46 @@ class LoginViewModel: NSObject {
     }
     
     // MARK: Login
-    func login(withEmail emailId : String?, password : String?) {
+    func login(withEmail emailId : String?, password : String?) -> Observable<User?> {
         
-        self.loginRepository?.login(withEmailId: emailId, password: password).asObservable().subscribe(onNext: { [weak self] (event) in
+        return Observable.create({ [weak self](observer) -> Disposable  in
             
-            guard event != nil else {
+            self!.loginRepository!.login(withEmailId: emailId, password: password).asObservable().subscribe(onNext: { [weak self] (event) in
                 
-                print("LoginViewModel.login : User nil")
-                return
-            }
-            let event = event as? User
-            self?.userModel = event
-            
-            self?.user.onNext(event!)
-            
-            }, onError: { [weak self] (error) in
+                guard event != nil else {
+                    
+                    print("LoginViewModel.login : User nil")
+                    return
+                }
+                let event = event as? User
+                self?.userModel = event
+                observer.onNext(event)
                 
-                self?.user.onError(error)
-                
-        }).disposed(by: self.disposeBag!)
+                }, onError: {  (error) in
+                    
+                observer.onError(error)
+            })
+        })
     }
     
     // MARK: Register
-    func  register(withName name: String, emailId: String, password: String, phoneNumber: String, gender: String) {
+    func  register(withName name: String, emailId: String, password: String, phoneNumber: String, gender: String) -> Observable<String?> {
         
-        self.loginRepository?.register(withName: name, emailId: emailId, password: password, phoneNumber: phoneNumber, gender: gender).asObservable().subscribe(onNext: { [weak self] (event) in
+        return Observable.create({ [weak self](observer) -> Disposable  in
             
-            guard event != nil else {
+            self!.loginRepository!.register(withName: name, emailId: emailId, password: password, phoneNumber: phoneNumber, gender: gender).asObservable().subscribe(onNext: {  (event) in
                 
-                print("LoginViewModel.register : register nil")
-                return
-            }
-            self?.status.onNext(event as! String)
-            }, onError: { [weak self] (error) in
-                
-                self?.status.onError(error)
-                
-        }).disposed(by: self.disposeBag!)
+                guard event != nil else {
+                    
+                    print("LoginViewModel.register : register nil")
+                    return
+                }
+                observer.onNext(event as? String)
+                }, onError: { (error) in
+                    
+                observer.onError(error)
+            })
+        })
     }
     
     // MARK: DataSource

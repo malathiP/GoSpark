@@ -47,14 +47,7 @@ class NewsFeedViewController: BaseViewController {
             return
         }
         let pageIndex = count / AppConstants.NewsFeed.pageCount
-        newsFeedViewModel?.getNewsFeeds(basedOnAccessToken: loginViewModel?.accessToken(), page: pageIndex + 1)
-        self.addObserverToNewsFeed()
-    }
-    // MARK: AddObserver to newsFeeds
-    func addObserverToNewsFeed() {
-        
-        var subscribe : Disposable?
-        subscribe = self.newsFeedViewModel?.kSteam.asObservable().subscribe(onNext: {[weak self] (feeds) in
+        newsFeedViewModel?.getNewsFeeds(basedOnAccessToken: loginViewModel?.accessToken(), page: pageIndex + 1).asObservable().subscribe(onNext: {[weak self] (feeds) in
             
             self?.hideLoader()
             self?.newsFeedTableView.reloadData()
@@ -64,8 +57,7 @@ class NewsFeedViewController: BaseViewController {
                 self?.hideLoader()
                 print("NewsFeedViewController.addObserverToNewsFeed : \(error.localizedDescription)")
                 
-        })
-        subscribe?.disposed(by: self.disposeBag)
+        }).disposed(by: self.disposeBag)
     }
     
     // MARK: LoadMore

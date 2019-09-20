@@ -95,19 +95,10 @@ class RegisterViewController: BaseViewController {
             self.showAlertWith("Alert!", message: "Enter PhoneNumber", completionHandler: nil)
             return
         }
-        self.loginViewModel?.register(withName:name , emailId: email, password: password, phoneNumber: phoneNumber, gender: gender)
-        self.addObserverToRegister()
-    }
-    
-    // MARK: AddObserver to register
-    func addObserverToRegister() {
-        
-        var subscribe : Disposable?
-        subscribe = self.loginViewModel?.status.asObservable().subscribe(onNext: {[weak self] (status) in
+        self.loginViewModel?.register(withName:name , emailId: email, password: password, phoneNumber: phoneNumber, gender: gender).asObservable().subscribe(onNext: {[weak self] (status) in
             
-            subscribe?.dispose()
             self?.hideLoader()
-            self?.showAlertWith("Alert!", message: status, completionHandler:{
+            self?.showAlertWith("Alert!", message: status ?? "", completionHandler:{
                 
                 self?.navigationController?.popViewController(animated: true)
             })
@@ -117,10 +108,8 @@ class RegisterViewController: BaseViewController {
                 self?.hideLoader()
                 print("RegisterViewController.addObserverToRegister : \(error.localizedDescription)")
                 self?.showAlertWith("Error!", message: "Registration Failed", completionHandler: nil)
-                subscribe?.dispose()
                 
-        })
-        subscribe?.disposed(by: self.disposeBag)
+        }).disposed(by: self.disposeBag)
     }
 
 }

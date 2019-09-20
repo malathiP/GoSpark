@@ -37,25 +37,6 @@ class LoginViewController: BaseViewController {
         self.passwordTextField.text = ""
     }
     
-    // MARK: AddObserver to login
-    func addObserverToLogin() {
-        
-        subscribe = self.loginViewModel.user.subscribe(onNext: {[weak self] (user) in
-
-            self?.hideLoader()
-            self?.showNewsFeedsController(withUserName: user.name ?? "")
-
-            }, onError: { [weak self](error) in
-
-                self?.hideLoader()
-                print("LoginViewController.addObserverToLogin : \(error.localizedDescription)")
-                self?.showAlertWith("Error!", message: "Invalid Credentials", completionHandler: nil)
-
-        })
-        subscribe?.disposed(by: self.disposeBag)
-        
-    }
-    
     // MARK: Login Action
     @IBAction func login(_ sender: Any) {
         
@@ -66,17 +47,23 @@ class LoginViewController: BaseViewController {
     }
     func doLogin() {
         
-        if subscribe != nil {
-
-            subscribe?.dispose()
-        }
         guard self.isValidateLogin() else {
             
             return
         }
         self.showLoader()
-        self.loginViewModel.login(withEmail: self.emailIdTextField.text, password: self.passwordTextField.text)
-        self.addObserverToLogin()
+        self.loginViewModel.login(withEmail: self.emailIdTextField.text, password: self.passwordTextField.text).asObservable().subscribe(onNext: {[weak self] (user) in
+            
+            self?.hideLoader()
+            self?.showNewsFeedsController(withUserName: user?.name ?? "")
+            
+            }, onError: { [weak self](error) in
+                
+                self?.hideLoader()
+                print("LoginViewController.addObserverToLogin : \(error.localizedDescription)")
+                self?.showAlertWith("Error!", message: "Invalid Credentials", completionHandler: nil)
+                
+        }).disposed(by: self.disposeBag)
     }
     func isValidateLogin() -> Bool {
         

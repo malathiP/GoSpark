@@ -13,8 +13,6 @@ class NewsFeedViewModel: NSObject {
     
     // MARK: - Variables
     var newsFeedRepository: NewsFeedRepository?
-    var disposeBag : DisposeBag? = DisposeBag()
-    var kSteam = PublishSubject<KSteam>()
     
     // MARK: Private variables
     private var kSteamModel : KSteam?
@@ -30,9 +28,11 @@ class NewsFeedViewModel: NSObject {
     }
     
     // MARK: Get newsFeeds based on accesstoken
-    func getNewsFeeds(basedOnAccessToken token: String?, page : Int) {
+    func getNewsFeeds(basedOnAccessToken token: String?, page : Int) -> Observable<KSteam?> {
         
-        self.newsFeedRepository?.getNewsFeeds(basedOnAccessToken: token, page: page).asObservable().subscribe(onNext: { [weak self] (event) in
+        return Observable.create({ [weak self](observer) -> Disposable  in
+
+        self!.newsFeedRepository!.getNewsFeeds(basedOnAccessToken: token, page: page).asObservable().subscribe(onNext: { [weak self] (event) in
             
             guard event != nil else {
                 
@@ -50,13 +50,14 @@ class NewsFeedViewModel: NSObject {
                 self?.kSteamModel = event
             }
             
-            self?.kSteam.onNext(event!)
+            observer.onNext(event)
             
-            }, onError: { [weak self] (error) in
+            }, onError: {  (error) in
                 
-                self?.kSteam.onError(error)
+                observer.onError(error)
                 
-        }).disposed(by: self.disposeBag!)
+        })
+        })
     }
     
     // MARK: DataSource
