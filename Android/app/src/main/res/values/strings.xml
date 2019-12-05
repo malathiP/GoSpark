@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">demo</string>
+    <string name="TapMe">TapMe</string>
+    <string-array name="colors">
+        <item>red</item>
+        <item>blue</item>
+        <item>green</item>
+        <item>grey</item>
+    </string-array>
+</resources>
